@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "tuktuk",
+    "owner": "bipin0x01",
+    "slug": "tuktuk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/tuktuk_logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.bipin0x01.tuktuk"
+    },
+    "web": {
+      "favicon": "./assetspoollogo.png"
+    }
+  }
+}
