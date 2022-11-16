@@ -63,20 +63,13 @@ const HomeScreen = () => {
               },
             }}
             onPress={(data, details = null) => {
-              dispatch(
-                setOrigin({
-                  location: details.geometry.location,
-                  description: data.description,
-                })
-              );
-
-              dispatch(selectDestination(null));
+              console.log(data, details);
             }}
             fetchDetails={true}
-            enablePoweredByContainer={false}
+            // enablePoweredByContainer={false}
             minLength={2}
             query={{
-              key: GOOGLE_MAPS_APIKEY,
+              key: "AIzaSyC0pi36NCYygUaAbn3wQrrmjtairvWDxGY",
               language: "en",
             }}
             placeholder="Where are you now?"

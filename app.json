@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "tuktuk",
-    "owner": "bipin0x01",
-    "slug": "tuktuk",
+    "name": "pool-me-in",
+    "owner": "k190237",
+    "slug": "pool-me-in",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/tuktuk_logo.png",
+    "icon": "./assets/pool-me-in-logo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -23,13 +23,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/pool-me-in-logo.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.bipin0x01.tuktuk"
+      "package": "com.k190237.poolmein"
     },
     "web": {
-      "favicon": "./assetspoollogo.png"
+      "favicon": "./assets/poollogo.png"
     }
   }
 }
