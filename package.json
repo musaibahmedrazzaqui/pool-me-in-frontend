@@ -38,6 +38,7 @@
     "react-native-tomtom-maps": "^0.0.1-alpha.2",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "^0.18.10",
+    "react-native-webview": "11.23.0",
     "react-redux": "^8.0.2",
     "react-request": "^3.2.0",
     "recompose": "^0.30.0",

@@ -30,7 +30,7 @@ export default function LoginScreen({ navigation }) {
         password: password.value,
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.data.error === 0) {
           alert("Sucessfully logged in!");
           navigation.reset({
