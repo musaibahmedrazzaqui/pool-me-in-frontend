@@ -7,6 +7,15 @@
     "orientation": "portrait",
     "icon": "./assets/pool-me-in-logo.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "maplibre",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoibXVzYWliYWhtZWRyYXp6YXF1aSIsImEiOiJjbGFwaHlud2gwYzVkM3JxZXo5NHp6aGxsIn0.JjVmKAGn2ZJVWsaTPWoN-g"
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

@@ -25,7 +25,7 @@ export default function LoginScreen({ navigation }) {
       return;
     }
     axios
-      .post("http://192.168.10.135:3002/users/login", {
+      .post("http://192.168.1.5:3002/users/login", {
         emailID: email.value,
         password: password.value,
       })

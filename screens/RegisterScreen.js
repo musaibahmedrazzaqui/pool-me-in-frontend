@@ -31,7 +31,7 @@ export default function RegisterScreen({ navigation }) {
     //   return
     // }
     axios
-      .post("http://192.168.10.135:3002/users/register", {
+      .post("http://192.168.1.5:3002/users/register", {
         firstName: firstName.value,
         lastName: lastName.value,
         gender: gender.value,

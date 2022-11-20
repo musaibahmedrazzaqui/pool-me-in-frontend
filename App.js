@@ -10,6 +10,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ResetPasswordScreen from "./screens/ResetPasswordScreen";
 import Connections from "./screens/Connections";
 import EditProfileScreen from "./screens/EditProfileScreen";
+import FromScreen from "./screens/FromScreen";
 
 // Redux Store
 import { store } from "./store";
@@ -20,6 +21,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FoodScreen from "./screens/FoodScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import { isPending } from "@reduxjs/toolkit";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -68,6 +70,13 @@ export default function App() {
             <Stack.Screen
               name="ReferScreen"
               component={ReferScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="FromScreen"
+              component={FromScreen}
               options={{
                 headerShown: false,
               }}

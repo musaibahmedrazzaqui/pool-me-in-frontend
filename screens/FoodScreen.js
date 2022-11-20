@@ -17,7 +17,7 @@ export default function FoodScreen({ navigation }) {
   const [to, setTo] = useState({ value: "", error: "" });
   const [fare, setFare] = useState({ value: "", error: "" });
   const [selected, setSelected] = React.useState("");
-  let data = [
+  let carData = [
     {
       value: "Suzuki Alto",
     },
@@ -28,6 +28,12 @@ export default function FoodScreen({ navigation }) {
       value: "Suzuki Wagon R",
     },
   ];
+  const onFromPressed = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "FromScreen" }],
+    });
+  };
   const onLoginPressed = () => {
     // if (emailError || passwordError) {
     //   setEmail({ ...email, error: emailError });
@@ -45,16 +51,12 @@ export default function FoodScreen({ navigation }) {
       <BackButton goBack={navigation.goBack} />
       {/* <Logo /> */}
       <Header>Where are you travelling to?</Header>
-      <TextInput
-        label="From where?"
-        returnKeyType="next"
-        value={from.value}
-        onChangeText={(text) => setFrom({ value: text, error: "" })}
-        autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
-      />
+      <TouchableOpacity onPress={onFromPressed}>
+        <View style={styles.container_touchable}>
+          <Text style={styles.description_two}>From where?</Text>
+        </View>
+      </TouchableOpacity>
+
       <TextInput
         label="To where?"
         returnKeyType="done"
@@ -66,7 +68,7 @@ export default function FoodScreen({ navigation }) {
         style={{ minWidth: "15rem" }}
         search="false"
         setSelected={(val) => setSelected(val)}
-        data={data}
+        data={carData}
         save="value"
       />
       <TextInput
@@ -79,12 +81,6 @@ export default function FoodScreen({ navigation }) {
       <Button mode="contained" onPress={onLoginPressed}>
         Save
       </Button>
-      {/* <View style={styles.row}>
-        <Text>Don’t have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.replace("RegisterScreen")}>
-          <Text style={styles.link}>Sign up</Text>
-        </TouchableOpacity>
-      </View> */}
     </Background>
   );
 }
@@ -105,6 +101,19 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 13,
+    color: theme.colors.secondary,
+    paddingTop: 8,
+    paddingBottom: 8,
+  },
+  container_touchable: {
+    borderWidth: 1,
+    width: 290,
+    borderLeftColor: theme.colors.primary,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  description_two: {
+    fontSize: 16,
     color: theme.colors.secondary,
     paddingTop: 8,
     paddingBottom: 8,
